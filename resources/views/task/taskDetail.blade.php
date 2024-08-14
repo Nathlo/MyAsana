@@ -1,6 +1,6 @@
 @extends('layouts.asana-app')
 
-@section('title', 'My.Asana | Ma Tâche')
+@section('title', 'My.Asana | Tâches')
 
 
 @section('content')
@@ -20,6 +20,7 @@
               <div class="">Début :<span class="ml-2 mr-3 rounded-full bg-blue-100 px-2 py-0.5 text-blue-900">{{ $task->starts_at }} </span></div>
               <div class="">Fin :<span class="ml-2 mr-3 rounded-full bg-blue-100 px-2 py-0.5 text-blue-900">{{ $task->ends_at }} </span></div>
 
+              <!-- icons: Edit / Delete / Back -->
               <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA33F7"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
               </a>
