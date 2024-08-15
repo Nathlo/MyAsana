@@ -35,7 +35,7 @@
                 <p class="text-sm text-gray-600">Changez ici <br> votre photo</p>
             </div>
             <div class="flex h-56 w-full flex-col items-center justify-center gap-4 rounded-xl border border-dashed border-gray-300 p-5 text-center">
-                <img src="{{ $employee->photo}}" class="h-16 w-16 rounded-full" />
+                <img src="#" class="h-16 w-16 rounded-full" />
                 <p class="text-sm text-gray-600">Glissez ici votre photo pour commencer à la télécharger</p>
                 <input type="file" class="max-w-full rounded-lg px-2 font-medium text-blue-600 outline-none ring-blue-600 focus:ring-1" />
             </div>
