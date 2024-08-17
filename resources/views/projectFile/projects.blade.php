@@ -7,6 +7,10 @@
 
     <h1 class="text-center text-3xl font-bold font-bebas-neue uppercase mt-8 mb-6">Mes projets</h1>
         
+        @if (session('success'))
+            <x-success/>
+        @endif
+        
     <div class="mx-auto max-w-[1280px]">
 
         <!-- 'Add New Project' button -->  

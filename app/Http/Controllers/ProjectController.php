@@ -25,6 +25,7 @@ class ProjectController extends Controller
     {
         $managers = User::where('role', 'manager')->get();
 
+        // hard coded a copy of 'status enum' to use in the blade
         $status = [
             'Lancé' => 'Lancé',
             'Actif' => 'Actif',
@@ -55,7 +56,7 @@ class ProjectController extends Controller
         return  redirect()->route('projects.index')
                      ->with('success', 'Votre projet a été créé');
 
-        //return back();
+        
     }
 
     /**
@@ -71,7 +72,17 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projectFile.projectEdit');
+        $managers = User::where('role', 'manager')->get();
+
+        // hard coded a copy of 'status enum' to use in the blade
+        $status = [
+            'Lancé' => 'Lancé',
+            'Actif' => 'Actif',
+            'Terminé' => 'Terminé'
+        ];
+
+
+        return view('projectFile.projectEdit', compact('managers', 'status', 'project'));
     }
 
     /**
@@ -79,11 +90,13 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+        //dd($request);
+
         $validatedData = $request->validate([
             'employee_id' => 'required|integer',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:255',
-            'starts_at' => 'required|date|after:tomorrow',
+            'starts_at' => 'required|date',
             'ends_at' => 'required|date|after:starts_at',
             'status' => 'required|string|max:255',
         ]);

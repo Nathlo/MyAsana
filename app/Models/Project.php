@@ -20,6 +20,15 @@ class Project extends Model
         'status',
     ];
 
+    // casting to get the Date Object instead of getting a string for the date
+    protected function casts(): array
+    {
+        return [
+            'starts_at' => 'datetime',
+            'ends_at' => 'datetime',
+        ];
+    }
+
     /**
      * Get the Employee that owns the Project
      *
