@@ -20,7 +20,7 @@
               </a>
               </td>
             <td class="whitespace-nowrap px-3 py-5 text-sm text-gray-500">
-              <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Active</span>
+              <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{{ $project->status }}</span>
             </td>
 
             @php

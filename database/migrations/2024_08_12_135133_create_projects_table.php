@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('description');
             $table->dateTime('starts_at');
             $table->dateTime('ends_at');
-            $table->enum('status', ['Started', 'On_track', 'Achieved']);
+            $table->enum('status', ['Lancé', 'Actif', 'Terminé']);
             $table->timestamps();
         });
     }

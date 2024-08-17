@@ -29,7 +29,7 @@ class ProjectFactory extends Factory
             'description' => fake()->sentence(rand(10, 20), true),
             'starts_at'=>$starts_at,
             'ends_at'=>$ends_at,
-            'status'=>fake()->randomElement(['Started', 'On_track', 'Achieved']),
+            'status'=>fake()->randomElement(['Lancé', 'Actif', 'Terminé']),
             
         ];
     }

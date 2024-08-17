@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::orderBy('starts_at', 'desc')->paginate(4);
+        $projects = Project::orderBy('created_at', 'desc')->paginate(4); // with 'created_at' -> the latest project added is ranked at the top
 
         return view('projectFile.projects', compact('projects'));
     }
@@ -22,7 +23,15 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('projectFile.projectCreate');
+        $managers = User::where('role', 'manager')->get();
+
+        $status = [
+            'Lancé' => 'Lancé',
+            'Actif' => 'Actif',
+            'Terminé' => 'Terminé'
+        ];
+
+        return view('projectFile.projectCreate', compact('managers', 'status'));
     }
 
     /**
@@ -40,10 +49,13 @@ class ProjectController extends Controller
             'status' => 'required|string|max:255',
         ]);
 
-        $project = Project::create($validatedData);
+        $project = new Project($validatedData);
 
-        return redirect()->route('project.detail', $project)
-                        ->with('success', 'Nouveau projet créé');
+        $project->save();
+        return  redirect()->route('projects.index')
+                     ->with('success', 'Votre projet a été créé');
+
+        //return back();
     }
 
     /**
