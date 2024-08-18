@@ -46,6 +46,6 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         // return redirect(route('dashboard', absolute: false));
-        return redirect(route('tasks.index', absolute: false)); // After logged in, redirect to 'mes tâches'
+        return redirect(route('projects.index', absolute: false)); // After logged in, redirect to 'mes projets'
     }
 }

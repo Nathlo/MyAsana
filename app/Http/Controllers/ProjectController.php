@@ -45,7 +45,7 @@ class ProjectController extends Controller
             'employee_id' => 'required|integer',
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:255',
-            'starts_at' => 'required|date|after:tomorrow',
+            'starts_at' => 'required|date|after:now',
             'ends_at' => 'required|date|after:starts_at',
             'status' => 'required|string|max:255',
         ]);

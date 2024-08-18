@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         //return redirect()->intended(route('dashboard', absolute: false));
-        return redirect()->intended(route('tasks.index', absolute: false)); // After logged in, redirect to 'mes tâches'
+        return redirect()->intended(route('projects.index', absolute: false)); // After logged in, redirect to 'mes projets'
 
     }
 

@@ -5,15 +5,18 @@
         </div>
         <div class="flex items-center">
             <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
-                <a href="{{ route('tasks.index') }}" class="py-2 px-4 m-2 flex hover:bg-pink-500 hover:text-white text rounded-lg">
-                    Tâches
-                </a>
                 <a href="{{ route('projects.index') }}" class="py-2 px-4 m-2 flex  hover:bg-pink-500 hover:text-white text rounded-lg">
                     Projets
                 </a>
+                
+                <a href="{{ route('tasks.index') }}" class="py-2 px-4 m-2 flex hover:bg-pink-500 hover:text-white text rounded-lg">
+                    Tâches
+                </a>
+                
                 <a href="{{ route('employees.index') }}" class="py-2 px-4 m-2 flex  hover:bg-pink-500 hover:text-white text rounded-lg">
                     Équipe
                 </a>
+                
                 <a href="{{route('logout')}}" class="py-2 px-2 flex border-2 border-pink-500 text-black font-bold hover:bg-pink-500 hover:text-white text rounded-lg">
                     Logout
                 </a>

@@ -11,16 +11,6 @@
         @csrf
             <h1 class="text-center text-3xl font-bold font-bebas-neue uppercase">Ajouter votre projet</h1>
             
-            @if ($errors->any())
-                <div class="w-60 mx-auto text-red-900 bg-red-300 rounded-md">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
             <div class="my-4 max-w-screen-md border px-4 shadow-xl sm:mx-4 sm:rounded-xl sm:px-4 sm:py-4 md:mx-auto">
                 <!-- Header with 'save' and 'cancel' buttons -->
                 <div class="flex flex-col border-b py-4 sm:flex-row sm:items-start">

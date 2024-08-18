@@ -6,7 +6,7 @@
 @section('content')
 
     <h1 class="text-center text-3xl font-bold font-bebas-neue uppercase mt-8 mb-6">Mes projets</h1>
-        
+        <!-- Component: Alert message for successful update-->
         @if (session('success'))
             <x-success/>
         @endif
