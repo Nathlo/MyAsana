@@ -11,13 +11,16 @@ My.Asana est une application web de gestion des tâches conçue pour les petites
 - Composer
 - Serveur web (Apache, Nginx, etc.)
 - MySQL ou tout autre base de données supportée par Laravel
- - Node.js et npm (pour la gestion des assets front-end)
+- Node.js et npm (pour la gestion des assets front-end)
 
 ---
 ### Étapes d'installation :
 
 1. Cloner le dépôt
 Clonez le dépôt GitHub de My.Asana sur votre machine locale.
+```php
+git clone https://github.com/votre-utilisateur/my-asana.git
+cd my-asana
 
 2. Installer les dépendances
 Installez les dépendances PHP via Composer.
