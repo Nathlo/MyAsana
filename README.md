@@ -25,7 +25,7 @@ cd my-asana
 
 2. Installer les dépendances
 Installez les dépendances PHP via Composer.
-`php
+`
 composer install
 `
 Installez les dépendances JavaScript et compilez les assets front-end.
@@ -36,20 +36,20 @@ npm run dev
 
 3. Configurer l'environnement
 Copiez le fichier .env.example en .env et configurez-le selon votre environnement (base de données, mail, etc.).
-`php
+`
 cp .env.example .env
 `
 
 4. Configurer la base de données
 Mettez en place votre base de données MySQL et configurez les informations de connexion dans le fichier .env.
 Puis, exécutez les migrations pour créer les tables nécessaires.
-`php
+`
 php artisan migrate
 `
 
 5. Lancer l'application
 Démarrez le serveur de développement Laravel.
-`php
+`
 php artisan serve
 `
 L'application sera accessible à l'adresse suivante : http://localhost:8000.
